@@ -11,9 +11,9 @@ scoreboard objectives remove ds_P_PlayerCount
 scoreboard objectives remove ds_PlayerItter 
 
 # Player cord vars ---------------------------------------------
-scoreboard objectives remove ds_X
-scoreboard objectives remove ds_Y
-scoreboard objectives remove ds_Z
+scoreboard objectives remove ds_WorldX
+scoreboard objectives remove ds_WorldY
+scoreboard objectives remove ds_WorldZ
 
 # Chunk Generation vars ----------------------------------------
 scoreboard objectives remove ds_Chunk_X

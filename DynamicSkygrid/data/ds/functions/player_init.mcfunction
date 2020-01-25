@@ -2,9 +2,9 @@
 
 say player scores were initulized!
 
-scoreboard players set @a[tag=!ds_VARSINIT] ds_X 0
-scoreboard players set @a[tag=!ds_VARSINIT] ds_Y 0
-scoreboard players set @a[tag=!ds_VARSINIT] ds_Z 0
+scoreboard players set @a[tag=!ds_VARSINIT] ds_WorldX 0
+scoreboard players set @a[tag=!ds_VARSINIT] ds_WorldY 0
+scoreboard players set @a[tag=!ds_VARSINIT] ds_WorldZ 0
 
 scoreboard players set @a[tag=!ds_VARSINIT] ds_Chunk_X 0
 scoreboard players set @a[tag=!ds_VARSINIT] ds_Chunk_Z 0

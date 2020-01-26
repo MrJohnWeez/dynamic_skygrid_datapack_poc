@@ -10,12 +10,14 @@ execute store result entity @e[limit=1,type=minecraft:armor_stand, tag=ds_SELECT
 execute store result entity @e[limit=1,type=minecraft:armor_stand, tag=ds_SELECTED_BC] Pos[1] double 1 run scoreboard players get #ds_int ds_TempVar2
 execute store result entity @e[limit=1,type=minecraft:armor_stand, tag=ds_SELECTED_BC] Pos[2] double 1 run scoreboard players get @e[limit=1,type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_Chunk_Base_Z
 
-scoreboard players set @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_PlacedBlock 0
-execute store success score @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_PlacedBlock at @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] run setblock ~ ~ ~ minecraft:grass_block
-execute if score @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC, limit=1] ds_PlacedBlock matches 1 run say placed block!
-scoreboard players set @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_PlacedBlock 0
+# If a new chunk is found clear it out and generate the skygrid
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_NewChunk 0
+execute store success score @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC, limit=1] ds_NewChunk at @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] run setblock ~ ~ ~ minecraft:purpur_block
+    execute if score @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC, limit=1] ds_NewChunk matches 1 run function ds:clear_current_chunk
+    execute if score @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC, limit=1] ds_NewChunk matches 1 run function ds:skygrid_current_chunk
 
-# Clean up tags
+# Clean up tags and scores
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] ds_NewChunk 0
 tag @e[type=minecraft:armor_stand, tag=ds_SELECTED_BC] remove ds_SELECTED_BC
 
 # Move to next player

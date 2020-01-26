@@ -14,6 +14,21 @@ scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_Wor
 scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_WorldY 0
 scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_WorldZ 0
 
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_Chunk_Z 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_Chunk_X 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_Chunk_Base_X 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_Chunk_Base_Z 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_EdRenderCycle 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_PosiChunks 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_CurrRendDist 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_MaxXZChunk 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_CurrXChunk 0
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_CurrZChunk 0
+
+scoreboard players set @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] ds_NewChunk 0
+
+
+
 tag @e[type=minecraft:armor_stand, tag=ds_PLAYER_NULL] remove ds_PLAYER_NULL
 
 # Move to next random player

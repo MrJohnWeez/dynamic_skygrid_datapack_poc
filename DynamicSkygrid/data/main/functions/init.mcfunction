@@ -30,7 +30,7 @@ scoreboard objectives add ds_TempVar1 dummy
 scoreboard players set #ds_int ds_TempVar1 0
 
 scoreboard objectives add ds_TempVar2 dummy
-scoreboard players set #ds_int ds_TempVar2 72
+scoreboard players set #ds_int ds_TempVar2 0
 
 scoreboard objectives add ds_TempVar3 dummy
 scoreboard players set #ds_int ds_TempVar3 0
@@ -39,21 +39,31 @@ scoreboard players set #ds_int ds_TempVar3 0
 scoreboard objectives add ds_Debug dummy
 scoreboard players set #ds_int ds_Debug 1
 
+# Player vars --------------------------------------------------
+scoreboard objectives add ds_PlayerID dummy
+
 # World cord vars ----------------------------------------------
 scoreboard objectives add ds_WorldX dummy
 scoreboard objectives add ds_WorldY dummy
 scoreboard objectives add ds_WorldZ dummy
+
+# Non Player vars ----------------------------------------------
+scoreboard objectives add ds_BcID dummy
+scoreboard objectives add ds_PlacedBlock dummy
 
 # Chunk Generation vars ----------------------------------------
 scoreboard objectives add ds_Chunk_X dummy
 scoreboard objectives add ds_Chunk_Z dummy
 scoreboard objectives add ds_Chunk_Base_X dummy
 scoreboard objectives add ds_Chunk_Base_Z dummy
-scoreboard objectives add ds_PlayerID dummy
+scoreboard objectives add ds_EdRenderCycle dummy
+scoreboard objectives add ds_PosiChunks dummy
+scoreboard objectives add ds_CurrRendDist dummy
+scoreboard objectives add ds_MaxXZChunk dummy
+scoreboard objectives add ds_CurrXChunk dummy
+scoreboard objectives add ds_CurrZChunk dummy
+scoreboard objectives add ds_NewChunk dummy
 
-# Non Player vars ----------------------------------------------
-scoreboard objectives add ds_BcID dummy
-scoreboard objectives add ds_PlacedBlock dummy
 
 # Start
 function ds:enable

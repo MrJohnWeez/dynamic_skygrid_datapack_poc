@@ -1,7 +1,14 @@
 #> (Re)Install the Dynamic Skygrid pack
-#ds = dynamic skygrid
-#bc = block counter
-#ds_P = prev var (for state machines)
+
+# Name spaces
+#    ds = Dynamic Skygrid
+#    cg = Chunk Generation
+
+# Var abriviations
+#    bc = block counter
+#    ds_P = prev var (for state machines)
+
+
 
 function ds:uninstall
 
@@ -9,8 +16,26 @@ function ds:uninstall
 scoreboard objectives add ds_ChunkSize dummy
 scoreboard players set #ds_int ds_ChunkSize 16
 
+scoreboard objectives add ds_GridGapX dummy
+scoreboard players set #ds_int ds_GridGapX 4
+
+scoreboard objectives add ds_GridGapY dummy
+scoreboard players set #ds_int ds_GridGapY 4
+
+scoreboard objectives add ds_GridGapZ dummy
+scoreboard players set #ds_int ds_GridGapZ 4
+
+scoreboard objectives add ds_MaxGridHeight dummy
+scoreboard players set #ds_int ds_MaxGridHeight 10
+
+scoreboard objectives add ds_MinGridHeight dummy
+scoreboard players set #ds_int ds_MinGridHeight 0
+
 scoreboard objectives add ds_Rend_Dist dummy
 scoreboard players set #ds_int ds_Rend_Dist 2
+
+scoreboard objectives add ds_Inverse dummy
+scoreboard players set #ds_int ds_Inverse -1
 
 # Global fake player vars --------------------------------------
 scoreboard objectives add ds_Enabled dummy
@@ -64,6 +89,16 @@ scoreboard objectives add ds_CurrXChunk dummy
 scoreboard objectives add ds_CurrZChunk dummy
 scoreboard objectives add ds_NewChunk dummy
 
+scoreboard objectives add ds_LocalX dummy
+scoreboard objectives add ds_LocalY dummy
+scoreboard objectives add ds_LocalZ dummy
+
+scoreboard objectives add cg_WorldX dummy
+scoreboard objectives add cg_WorldZ dummy
+
+scoreboard objectives add ds_FinishedX dummy
+scoreboard objectives add ds_FinishedY dummy
+scoreboard objectives add ds_FinishedZ dummy
 
 # Start
 function ds:enable
@@ -72,3 +107,5 @@ function ds:enable
 scoreboard objectives setdisplay sidebar ds_WorldX
 
 say Dynamic Skygrid reloaded!
+
+#summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648}

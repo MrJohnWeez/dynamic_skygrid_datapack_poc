@@ -8,7 +8,7 @@ scoreboard players set @s ds_Chunk_Z 0
 scoreboard players set @s ds_Chunk_X 0
 scoreboard players set @s ds_Chunk_Base_X 0
 scoreboard players set @s ds_Chunk_Base_Z 0
-scoreboard players set @s ds_EdRenderCycle 0
+scoreboard players set @s ds_RenderCycleEd 1
 scoreboard players set @s ds_PosiChunks 0
 scoreboard players set @s ds_CurrRendDist 0
 scoreboard players set @s ds_MaxXZChunk 0

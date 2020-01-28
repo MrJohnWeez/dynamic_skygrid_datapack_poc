@@ -31,6 +31,3 @@ scoreboard objectives remove ds_BcID
 # Non-Player Tags ----------------------------------------------
 tag @e[tag=ds_PLAYER_NULL] remove ds_PLAYER_NULL
 tag @e[tag=ds_BLOCKCOUNTER] remove ds_BLOCKCOUNTER
-
-# Debug messages -----------------------------------------------
-scoreboard objectives remove ds_Debug

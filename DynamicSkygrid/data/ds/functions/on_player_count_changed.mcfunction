@@ -1,6 +1,6 @@
 #> Used to force the scoreboards of new players who are fist joining
 
-execute if score #ds_int ds_Debug matches 1.. run say player count changed
+say player count changed
 function ds:player_init
 
 say Recalculating user IDs...

@@ -1,7 +1,7 @@
 #> Itterates through chunk Z teleporting the block counter armor stand
 
 scoreboard players set @s ds_LocalX 0
-scoreboard players operation @s cg_WorldZ = @s ds_Chunk_Base_Z
+scoreboard players operation @s cg_WorldZ = @s cg_CordZChunk
 scoreboard players operation @s cg_WorldZ += @s ds_LocalZ
 execute as @s run function cg:scan_chunk_x
 

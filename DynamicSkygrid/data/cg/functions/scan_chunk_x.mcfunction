@@ -1,6 +1,6 @@
 #> Itterates through chunk X teleporting the block counter armor stand
 
-scoreboard players operation @s cg_WorldX = @s ds_Chunk_Base_X
+scoreboard players operation @s cg_WorldX = @s cg_CordXChunk
 scoreboard players operation @s cg_WorldX += @s ds_LocalX
 execute as @s run function cg:set_random_block
 

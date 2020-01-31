@@ -16,4 +16,3 @@ execute at @s run fill ~16 ~ ~-1 ~16 ~255 ~16 minecraft:air replace minecraft:la
 execute at @s run fill ~ ~ ~-1 ~15 ~255 ~-1 minecraft:air replace minecraft:lava
 execute at @s run fill ~ ~ ~16 ~15 ~255 ~16 minecraft:air replace minecraft:lava
 execute at @s run setblock ~ ~ ~ minecraft:purpur_block
-execute as @s run say Cleared chunk!
